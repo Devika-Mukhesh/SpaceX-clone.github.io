@@ -1,0 +1,645 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+html,body{
+    overflow-x: hidden;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family:  D-DIN-Regular, Arial, Verdana, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: #fff;
+    width: 100%;
+}
+
+
+/* navigation starts */
+
+header .container{
+
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: transparent;
+}
+header{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1400px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: left;
+    flex-direction: row;
+}
+.logo{
+    width:auto;
+    height: 47px;
+    margin-left: -1px;
+}
+.left-nav{
+
+    margin-top: 10px;
+    margin-left: -205px;
+}
+
+/* Base styling for navigation links */
+.left-nav a , .container-right-nav a{
+    position: relative; /* Needed for positioning the underline */
+    color: #fff; /* Adjust color as needed */
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+/* Underline effect on hover */
+.left-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Positions underline at the bottom of the text */
+    right: 0; /* Starts from the right */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: #fff; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth animation */
+}
+
+/* Hover state */
+.left-nav a:hover::after {
+    width: 100%; /* Expands underline to full width */
+    left: 0; /* Keeps it aligned from right to left */
+}
+
+.container-right-nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0; /* Positions underline at the bottom of the text */
+    right: 0; /* Starts from the right */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: #fff; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth animation */
+}
+
+.container-right-nav a:hover::after{
+    width: 100%; /* Expands underline to full width */
+    left: 0; /* Keeps it aligned from right to left */
+}
+
+.container-right-nav{
+    
+    margin-top: 10px;
+    margin-right: 99px;
+    margin-left: -180px;
+}
+
+header a{
+    flex-direction: row;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 12px;
+    position: relative;
+    font-family:  Arial, Verdana, sans-serif;
+    font-weight: 750;
+    font-style: normal;
+    letter-spacing: 0px;
+   
+}
+
+.bar {
+    top: 3px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    transform-origin: center center;
+    height: 1px;
+    line-height: 1.15;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1px;
+}
+/* .menu-icon, .bar {
+    position: absolute;
+} */
+.menu-icon{
+    cursor: pointer;
+}
+/* Heaader ends */
+
+
+/* landing page */
+
+.banner-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/Homepage_Starlink_SLC_40_Desktop_5b1e6b5dd0.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+.banner-container .container .left-section {
+
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin-bottom: 100px; 
+    letter-spacing: -1px;
+    margin-left: 50px;
+    overflow: hidden;
+    
+}
+.left-section{
+
+    display: flex;
+    width: 600px;
+    height: 500px;
+    justify-content: flex-end;
+
+}
+/* header styling */
+.header{
+    position: relative; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px; 
+    background-color: rgba(12, 12, 12, 0.9); /* Slightly transparent background */
+    z-index: 1000; /* Ensure it's above other content */
+    transition:  top 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 50px;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+/* hoveer on  header */
+
+.header a:hover{
+
+    border-bottom: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+
+.banner-container.container .left-section p{
+    font-size: large;
+    letter-spacing: -3px;
+    width:auto;
+    height: 50px;
+    overflow: clip;
+    margin-bottom: -42px;
+}
+
+.banner-container .container .left-section h1{
+
+    font-size: 45px;
+    letter-spacing: -3px;
+    width:auto;
+    height: 50px;
+    overflow: clip;
+   
+}
+
+/* hover of button */
+
+.hover-button {
+    position: relative;
+    width: 165px;
+    height: 55px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid white;
+    overflow: hidden;
+    margin-top: -6px;
+    cursor: pointer;
+    transition: 0.4s all ease-in-out 0s;
+    z-index: 1;
+
+}
+
+.hover-button span{
+    position: relative;
+    z-index: 1;
+}
+
+.hover-button:hover{
+
+    color: black;
+}
+
+.hover-button::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height of the button */
+    width: 100%; /* Full width of the button */
+    background-color: transparent; /* Background color (can be changed) */
+    /*transform-origin: bottom;*/ /* Origin for scaling */
+    /*transform: translateX(-50%) scaleY(0);*/ /* Scale down to zero */
+    transition: 0.4s all ease-in-out 0s; /* Smooth transition */
+    z-index: -1; /* Behind the text */
+}
+
+.button1::before {
+    
+    height: 0;
+}
+
+.button1:hover::before{
+    top: unset;
+    bottom: 0;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    z-index: 0;
+
+}
+
+/* arrow animation */
+
+.arrow {
+    border: solid #fff;
+    border-width: 0px 2px 2px 0px;
+    display: block;
+    position: absolute; 
+    top: 90%;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 10px;
+    margin: 0;
+    z-index: 10;
+    animation: move 2s infinite ease;
+    
+}
+
+.down:nth-of-type(1) {
+    transform: rotate(45deg);
+}
+
+.down:nth-of-type(2){
+
+    transform: rotate(-45deg) ;
+}
+
+@keyframes move{
+    0% { margin-top: 0;}
+    50% {margin-top: 10px;}
+    100% { margin-top: 0;}
+}
+
+/* text animation */
+
+@keyframes appear {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px)
+    }
+}
+
+.left-section{
+
+    animation:appear 0.5s ease-in 1 0.5s normal both;
+    animation-timeline: scroll();
+}
+/* first section ends */
+
+/* Second section starts */
+
+/* .section-2{
+    width: 100%;
+    height: 99vh;
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/Starlink_G9_9_OS_56_Streak_Horiz_4144_Desktop_74d5dd2d44.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+}
+
+.section-2 .container .left-section {
+
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin-bottom: 100px; 
+    letter-spacing: -1px;
+    margin-left: 50px;
+    overflow: hidden;
+    
+}
+
+.section-2 .container .left-section p{
+    font-size: large;
+    letter-spacing: -1px;
+    width:auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: -42px;
+}
+
+.section-2 .container .left-section h1{
+
+    font-size: 45px;
+    letter-spacing: -3px;
+    width:auto;
+    height: 50px;
+    overflow: hidden;
+    
+   
+}
+
+
+.section-2 .container .left-section button{
+
+    width: 165px;
+    height: 55px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    text-align: center;
+    background: transparent;
+    border: 2px solid white;
+    overflow: hidden;
+    margin-top: -6px;
+} */
+
+/* section 2 ends here */
+
+/* Section 3 starts here */
+
+.section-3{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/Crew_8_Return_Desktop_bbf9b2e84a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+}
+
+.section-3 .container .left-section {
+
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin-bottom: 100px; 
+    letter-spacing: -1px;
+    margin-left: 50px;
+    overflow: hidden;
+    
+}
+
+.section-3 .container .left-section p{
+    font-size: large;
+    letter-spacing: -1px;
+    width:auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: -42px;
+
+}
+
+.section-3 .container .left-section h1{
+
+    font-size: 45px;
+    letter-spacing: -3px;
+    width:auto;
+    height: 100px;
+    overflow: hidden;
+    line-height: 50px;
+    
+   
+}
+
+
+/* Section 3 ends here */
+
+/* Section 4 starts here */
+
+.section-4{
+    width: 100vw;
+    height: 100vh; /* Ensures it takes up the full viewport height */
+    display: flex;
+    position: relative; /* Needed for the absolute positioning of the video */
+    overflow: hidden;
+    z-index: -1;
+}
+.section-4 .container {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Ensures child elements are positioned relative to the container */
+    z-index: 1; /* Places the text and button above the video */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    flex-direction: column;
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.section-4 .container .left-section {
+
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin-bottom: 100px; 
+    letter-spacing: -1px;
+    margin-left: 50px;
+    overflow: hidden;
+    
+}
+
+.section-4 .container .left-section p{
+    font-size: large;
+    letter-spacing: -1px;
+    width:auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: -42px;
+}
+
+.section-4 .container .left-section h1{
+
+    font-size: 45px;
+    letter-spacing: -3px;
+    width:auto;
+    height: 100px;
+    overflow: hidden;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+
+/* Section 4 ends here */
+
+/* Section 5 starts here */
+
+.section-5{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/Eva_Suit_Desktop_alternate_1cf9bae18e.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+}
+
+.section-5 .container .left-section {
+
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin-bottom: 100px; 
+    letter-spacing: -1px;
+    margin-left: 50px;
+    overflow: hidden;
+    
+}
+
+.section-5 .container .left-section p{
+    font-size: large;
+    letter-spacing: -1px;
+    width:auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: -42px;
+}
+
+.section-5 .container .left-section h1{
+
+    font-size: 45px;
+    letter-spacing: -3px;
+    width:auto;
+    height: 100px;
+    overflow: hidden;
+
+   
+}
+
+
+
+/* Section 5 ends here */
+
+/* Section 6 starts here */
+
+.section-6{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://sxcontent9668.azureedge.us/cms-assets/assets/make_life_multiplanetary_desktop_3fa7cff73c.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.section-6 .container .left-section {
+
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin-bottom: 100px; 
+    letter-spacing: -1px;
+    margin-left: 50px;
+    overflow: hidden;
+    
+}
+
+.section-6 .container .left-section p{
+    font-size: large;
+    letter-spacing: -1px;
+    width:auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: -42px;
+}
+
+.section-6 .container .left-section h1{
+
+    font-size: 45px;
+    letter-spacing: -3px;
+    width:auto;
+    height: 100px;
+    overflow: hidden;
+
+    
+   
+}
+
+/* Section 6 ends here */
+
+/* footer starts here */
+
+#footer{
+    background-color: #000;
+    width: 100%; 
+    height: 80px;
+    position: relative; 
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 10.5px;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #979797;
+    padding: 35px;
+    letter-spacing: -1;
+
+}
+#footer a{
+
+    text-decoration: none;
+    color: #979797;
+    margin-left: 30px;
+    text-align: center;
+}
+
+/* footer ends here */
+
+/* the header transition */
+.section:target ~ .header
+{
+    background: transparent;
+}
+
+.section-2:target ~ .header,
+.section-3:target ~ .header,
+.section4:target ~ .header,
+.section5:target ~ .header,
+.section6:target ~ .header {
+    background-color: black; 
+}
+
